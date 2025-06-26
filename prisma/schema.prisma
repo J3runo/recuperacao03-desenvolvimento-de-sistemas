@@ -6,3 +6,12 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model livros {
+  id         String   @id
+  isbn       String   @unique
+  title      String
+  authors    String[]
+  created_at DateTime
+  updated_at DateTime
+}
